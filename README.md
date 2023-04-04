@@ -28,19 +28,15 @@ work as expected, since they're calling the Nestjs CLI directly.
 npm run build-rspack
 ```
 
-and
+Building works correctly. When you build and then you `node dist/main.js` you can see the NestJS app running properly.
+
+### Issue with `serve`
 
 ```bash
 npm run serve-rspack
 ```
 
 do not work correctly, since they're calling the Rspack CLI.
-
-### Issue with `build`
-
-Build artifacts are generated in the `dist` folder, however, running `node ./dist/main.js` does not work (works when building with Nestjs CLI).
-
-### Issue with `serve`
 
 It's calling the rspack server, instead of Nest.
 
